@@ -7,7 +7,7 @@ var data = {"completionStatus": ["completed", "completed", "completed", "complet
 
 // bin into categories and counts
 var categories = {};
-data.whatWorks.forEach(function(d) {
+data.notWork.forEach(function(d) {
 	responses = d.split(', ')
 	// console.log(responses);
 	responses.forEach(function(resp) {
@@ -52,4 +52,4 @@ var radarChartOptions = {
 };
 
 //Call function to draw the Radar chart
-RadarChart("#good-viz-container .radarChart", radarData, radarChartOptions);
+RadarChart("#bad-viz-container .radarChart", radarData, radarChartOptions);
