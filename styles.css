@@ -13,6 +13,11 @@ h2 {
   font-size: 14px;
 }
 
+.filter-controls {
+	margin: 0% 10% 0% 10%;
+	padding: 1%;
+}
+
 .svg {
   width: 750;
   height: 750;
