@@ -31,8 +31,8 @@ Object.keys(categories).forEach(function(c) {
 
 console.log(radarData);
 
-var margin = {top: 100, right: 100, bottom: 100, left: 100},
-				width = Math.min(500, window.innerWidth - 10) - margin.left - margin.right,
+var margin = {top: 80, right: 80, bottom: 80, left: 80},
+				width = Math.min(600, window.innerWidth - 10) - margin.left - margin.right,
 				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
 var color = d3.scale.ordinal()
@@ -49,7 +49,7 @@ var radarChartOptions = {
 };
 
 // call function to draw the Radar chart
-RadarChart("#good-viz-container .radarChart", radarData, radarChartOptions);
+RadarChart("#work-radar", radarData, radarChartOptions);
 
 
 // Chord Graph

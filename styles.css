@@ -1,48 +1,126 @@
 body {
-	background-color: #b7c0ce;
+	background-color: #f9f9f9;
 }
 
 h1 {
 	text-align: center;
-  margin: 5%;
-  margin-bottom: 2%;
+  margin: 18% 5% 5% 5%;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 74px;
+	color: black;
 }
 
 h2 {
-  margin: 1%;
-  font-size: 14px;
+  margin-bottom: 1%;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 'bold';
+}
+
+p, td {
+	font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container-fluid {
+	margin-bottom: 10%;
+}
+
+.intro-1 {
+	height: 100vh;
+	background: url(img/doors.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.intro-2 {
+	height: 100vh;
+}
+
+.intro-3 {
+	height: 100vh;
+	text-align: center;
+}
+
+.filler {
+	padding: 0.25% 1% 0% 1%;
+	background-color: gray;
+	opacity: 0.8;
+	width: 90%;
+	height: 4%;
+	margin: 1% 5% 0% 5%;
 }
 
 .filter-controls {
-	margin: 0% 10% 0% 10%;
-	padding: 1%;
+	padding: 0.25% 1% 0% 1%;
+	background-color: gray;
+	opacity: 0.8;
+	width: 90%;
+	height: 4%;
+	margin: 0% 5% 0% 5%;
+}
+
+.filter-controls p {
+	color: white;
+	font-size: 14px;
+}
+
+.filter-menu {
+	margin: 0% 0% 0% 80%;
+	padding: 0% 0% 2% 0%;
+}
+
+.filter-menu .label {
+	margin-right: 20%;
 }
 
 .svg {
-  width: 750;
-  height: 750;
+  width: 900;
+  height: 900;
 }
 
 .slider {
 	margin: auto;
   padding: 2%;
   width: 90%;
-  margin-bottom: 5%;
 }
 
 .viz-blurb {
 	text-align: justify;
 	font-size: 12px;
-	padding: 10% 15% 5% 0%;
-	margin: 0%;
+	padding: 2% 5% 2% 5%;
+	margin: 5% 50% 5% 0%;
+	/*#589875*/
+	background-color: gray;
+	color: white;
+	width: 100%;
+	opacity: 0.8;
 }
 
 .response-detail {
 	margin-right: 10%;
 	overflow-y: scroll;
 	height: 50%;
+	width: 100%;
 }
 
 .table {
 	font-size: 12px;
+}
+
+/* Radar Chart Styling */
+.radarChart {
+	/*text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;*/
+  cursor: default;
+}
+
+.legend {
+  font-family: 'Raleway', sans-serif;
+  fill: #333333;
+}
+
+.tooltip {
+  fill: #333333;
 }

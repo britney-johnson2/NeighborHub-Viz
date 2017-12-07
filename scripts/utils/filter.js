@@ -1,7 +1,5 @@
 
-var filterMenu = $('.filter-menu').append('<select class="select-city"></select>');
-
-function onlyUnique(value, index, self) { 
+function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
 
@@ -38,7 +36,7 @@ var onSelectChanged = function(e) {
 	} else {
 		filteredData = data;
 	}
-	
+
 	reloadViz();
 };
 
