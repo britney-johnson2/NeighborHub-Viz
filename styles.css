@@ -11,8 +11,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 1%;
-  font-size: 20px;
+	margin: 0% 0% 1% 0%;
+  font-size: 24px;
   font-family: 'Raleway', sans-serif;
   font-weight: 'bold';
 }
@@ -23,7 +23,7 @@ p, td {
 }
 
 .container-fluid {
-	margin-bottom: 10%;
+	margin-bottom: 0.4%;
 }
 
 .intro-1 {
@@ -42,6 +42,20 @@ p, td {
 .intro-3 {
 	height: 100vh;
 	text-align: center;
+}
+
+.map-container {
+	height: 100vh;
+	text-align: center;
+}
+
+.parent-viz-container {
+	height: 100vh;
+}
+
+.viz-container {
+	text-align: center;
+	margin-top: 2%;
 }
 
 .filler {
@@ -83,7 +97,7 @@ p, td {
 
 .slider {
 	margin: auto;
-  padding: 2%;
+  padding: 1%;
   width: 90%;
 }
 
@@ -92,6 +106,18 @@ p, td {
 	font-size: 12px;
 	padding: 2% 5% 2% 5%;
 	margin: 5% 50% 5% 0%;
+	/*#589875*/
+	background-color: gray;
+	color: white;
+	width: 100%;
+	opacity: 0.8;
+}
+
+.viz-header {
+	text-align: left;
+	font-size: 12px;
+	padding: 2% 2% 2% 2%;
+	margin: 0% 0% 0% 0%;
 	/*#589875*/
 	background-color: gray;
 	color: white;
@@ -123,4 +149,34 @@ p, td {
 
 .tooltip {
   fill: #333333;
+}
+
+.word-tip {
+	color: white;
+	background-color: #589875;
+	border-radius: 2px;
+	opacity: 0.8;
+	padding: 2px;
+	z-index: 2;
+}
+
+.voter-filter-container {
+	padding: 2%;
+}
+
+.question-dropdown {
+	margin: 2%;
+}
+
+#vote-checkbox-container {
+	margin: 2%;
+}
+
+#vote-question-filter-btn {
+	margin: 2%;
+}
+
+.label {
+	display: inline;
+	color:black;
 }

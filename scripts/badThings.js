@@ -36,9 +36,9 @@ var margin = {top: 80, right: 80, bottom: 80, left: 80},
 				width = Math.min(600, window.innerWidth - 10) - margin.left - margin.right,
 				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
-var color = d3.scale.ordinal()
+var color = d3.scaleOrdinal()
 							.range(["#EDC951","#CC333F","#00A0B0"]);
-				
+
 var radarChartOptions = {
   w: width,
   h: height,

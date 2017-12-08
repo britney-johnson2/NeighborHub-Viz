@@ -27,7 +27,7 @@ var onSelectChanged = function(e) {
 			if (c === selectedCity)
 				selectedIndices.push(idx);
 		});
-		// console.log(selectedIndices);
+		console.log('filter!');
 		filteredData = {}; // re-assign global variable filteredData
 		Object.keys(data).forEach(function(key) {
 			filteredData[key] = data[key].filter(function(d, idx) { return selectedIndices.includes(idx); });
@@ -36,7 +36,7 @@ var onSelectChanged = function(e) {
 	} else {
 		filteredData = data;
 	}
-
+  voteFiltered = filteredData['vote'];
 	reloadViz();
 };
 

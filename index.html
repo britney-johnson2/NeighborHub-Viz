@@ -26,7 +26,13 @@
 			<div class="row intro-3">
 				<h2> More explanation... </h2>
 			</div>
-  		<div class="row">
+			<div class="row map-container">
+				<h2> Where are respondents from? </h2>
+			</div>
+			<div class="row intro-3">
+				<h2> Let's explore the data!!! :D </h2>
+			</div>
+  		<div class="row parent-viz-container">
         <div class="col-lg-12">
           <div class="filter-controls">
             <div class="filter-menu">
@@ -125,6 +131,67 @@
                 </div>
               </div>
             </div>
+						<div class="hope-container">
+							<div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6 viz-container">
+                    <div class="cloud-container" id="hope-cloud"></div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="viz-blurb">
+                          <h2> What gives you hope? </h2>
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <h2> Explore Survey Responses: </h2>
+                        <div class="response-detail">
+                          <table class="table">
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+						</div>
+						<div class="vote-container">
+							<div class="container-fluid">
+                <div class="row">
+									<div class="col-lg-12">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="viz-header">
+                          <h2> Are you planning to vote in the upcoming election? </h2>
+                          <p>
+	                          We asked respondents what their plans were for upcoming local elections.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 viz-container" id="vote-viz">
+                    <!-- VIZ HERE -->
+                  </div>
+									<div class="col-lg-6 voter-filter-container">
+                    <h2>See how responses to survey questions affect voter plans...</h2>
+										<div class="question-dropdown">
+											Select a question to explore: <select class="select-question" id="selected-ques"></select>
+										</div>
+										<div id="vote-checkbox-container">
+											<!-- inject checkboxes here -->
+										</div>
+										<div id="vote-question-filter-btn">
+											<button>Update Visualization</button>
+										</div>
+                  </div>
+                </div>
+              </div>
+						</div>
           </div>
   			</div>
 				<div class="col-lg-12 filler">
@@ -135,12 +202,11 @@
     <script type="text/javascript" src="slick-1.8.0/slick/slick.min.js"></script>
     <script src="scripts/utils/slider.js"></script>
     <!-- viz libraries -->
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.15.full.min.js"></script>
-    <script src="https://d3js.org/d3-array.v1.min.js"></script>
-    <script src="https://d3js.org/d3-path.v1.min.js"></script>
-    <script src="https://d3js.org/d3-chord.v1.min.js"></script>
     <script src="scripts/utils/radarChart.js"></script>
+		<script src="scripts/utils/d3.layout.cloud.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <!-- utility scripts -->
     <script src="scripts/utils/loadData.js"></script>
     <script src="scripts/utils/reload.js"></script>
@@ -149,5 +215,8 @@
     <script src="scripts/goodThings.js"></script>
     <script src="scripts/badThings.js"></script>
 		<script src="scripts/mayor.js"></script>
+		<script src="scripts/hope.js"></script>
+		<script src="scripts/questionFilter.js"></script>
+		<script src="scripts/vote.js"></script>
   </body>
 </html>
