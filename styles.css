@@ -124,6 +124,7 @@ p, td {
 	margin: 0% 0% 0% 0%;
 	height: 100vh;
 	text-align: center;
+	position: relative;
 }
 
 .map-heading {

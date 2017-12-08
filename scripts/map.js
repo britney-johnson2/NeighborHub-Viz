@@ -21,13 +21,11 @@ var election = new Datamap({
   geographyConfig: {
     highlightBorderColor: '#FFC266',
     highlightFillColor: '#FFC266',
-   popupTemplate: function(geography, data) {
-      return '<div class="hoverinfo">' + geography.properties.name + "\n" +
-      'Respondents: ' +  data.respondents + ' '
-    },
-    highlightBorderWidth: 3
+    highlightBorderWidth: 3,
+    popupTemplate: function(geography, data) {
+      return '<div class="hoverinfo"><b>' + geography.properties.name + '\n: ' +  data.respondents +'</b>';
+    }
   },
-
   fills: {
   'Most Respondents': '#589875',
   'Some Respondents': '#6fc496',
@@ -97,7 +95,7 @@ data:{
   },
   "MA": {
       "fillKey": "Most Respondents",
-      "respondents": 31
+      "respondents": numBoston
   },
   "MN": {
       "fillKey": "PENDING",
@@ -105,7 +103,7 @@ data:{
   },
   "MI": {
       "fillKey": "Some Respondents",
-      "respondents": 5
+      "respondents": numDET
   },
   "MS": {
       "fillKey": "PENDING",
@@ -141,7 +139,7 @@ data:{
   },
   "NY": {
       "fillKey": "Some Respondents",
-      "respondents": 8
+      "respondents": numNY
   },
   "ND": {
       "fillKey": "PENDING",
@@ -165,7 +163,7 @@ data:{
   },
   "PA": {
       "fillKey": "Some Respondents",
-      "respondents": 1
+      "respondents": numPenn
   },
   "RI": {
       "fillKey": "PENDING",
@@ -185,7 +183,7 @@ data:{
   },
   "TX": {
       "fillKey": "Some Respondents",
-      "respondents": 2
+      "respondents": numHTX
   },
   "UT": {
       "fillKey": "PENDING",
@@ -197,7 +195,7 @@ data:{
   },
   "VA": {
       "fillKey": "Some Respondents",
-      "respondents": 1
+      "respondents": numDC
   },
   "VT": {
       "fillKey": "PENDING",
