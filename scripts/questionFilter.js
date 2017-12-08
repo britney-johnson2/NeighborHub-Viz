@@ -51,11 +51,15 @@ var onSelectChanged = function(e) {
 		// get all possible responses of questions
     var dataKey = questions[selectedQuestion];
     var responses = filteredData[dataKey].filter(onlyUnique);
-    responses.forEach(function(resp) {
+    responses.forEach(function(resp, idx) {
       // add checkbox
-      var checkbox = '<input id="' + resp + '" type="radio" name="label">';
+			if (idx < 5) {
+				var checkbox = '<input id="' + resp + '" type="radio" name="label" class="fixedWidth">';
+			} else {
+				var checkbox = '<input id="' + resp + '" type="radio" name="label" class="width">';
+			}
       $('#vote-checkbox-container').append(checkbox);
-			$('#vote-checkbox-container').append('<p class="label">'+resp+'</p>');
+			$('#vote-checkbox-container').append('<label class="label">'+resp+'</label>');
     });
   } else {
     // do nothing

@@ -37,11 +37,87 @@ p, td {
 
 .intro-2 {
 	height: 100vh;
+	text-align: center;
+
+}
+
+.intro-2 h1 {
+	margin: 0% 0% 0% 0%;
+	padding: 16% 0% 2% 0%;
+	background-color: #589875;
+	opacity: 0.8;
+	color: white;
+}
+
+.subheading {
+	font-size: 42px;
+	font-family: 'Lora', serif;
 }
 
 .intro-3 {
 	height: 100vh;
+	background: url(img/bridge.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	padding: 10% 5% 10% 5%;
+}
+
+.intro-4 {
+	height: 100vh;
+	background: url(img/hands.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 10% 5% 10% 5%;
+}
+
+.cover {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	color: white;
+	padding: 10% 10% 10% 10%;
+}
+
+.cover h2 {
+	font-size: 48px;
+	margin-bottom: 2%;
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.cover p {
+	font-size: 25px;
+	font-family: 'Lora', serif;
+}
+
+.data-intro {
+	height: 100vh;
 	text-align: center;
+	padding: 10% 7% 10% 7%;
+}
+
+.data-intro h2 {
+	font-size: 48px;
+	font-family: 'Lora', serif;
+}
+
+.end {
+	height: 100vh;
+	text-align: center;
+	padding: 20% 0% 0% 0%;
+}
+
+.end h2 {
+	font-size: 42px;
+	font-family: 'Lora', serif;
+}
+
+.end h3 {
+	font-family: 'Lora', serif;
 }
 
 #map-viz-container {
@@ -124,7 +200,7 @@ p, td {
 	padding: 2% 2% 2% 2%;
 	margin: 0% 0% 0% 0%;
 	/*#589875*/
-	background-color: gray;
+	background-color: #589875;
 	color: white;
 	width: 100%;
 	opacity: 0.8;
@@ -165,6 +241,29 @@ p, td {
 	z-index: 2;
 }
 
+#vote-viz {
+	position: relative;
+	margin-top: 3%;
+}
+
+.pie-tip {
+	left: 60px;
+	top: 20px;
+	color: white;
+	font-size: 16px;
+	background-color: gray;
+	border-radius: 2px;
+	opacity: 0.9;
+	padding: 2%;
+	z-index: 50;
+	width: 20%;
+	height: 15%;
+	display: none;
+	box-shadow: 0 0 5px #999999;
+	position: absolute;
+	font-weight: bold;
+}
+
 .voter-filter-container {
 	padding: 2%;
 }
@@ -175,6 +274,7 @@ p, td {
 
 #vote-checkbox-container {
 	margin: 2%;
+	/*vertical-align: middle;*/
 }
 
 #vote-question-filter-btn {
@@ -182,6 +282,16 @@ p, td {
 }
 
 .label {
-	display: inline;
-	color:black;
+	display: inline-block;
+	color: gray;
+	font-size: 16px;
+	margin-right: 2%;
+}
+
+.label .width {
+	width: 10%;
+}
+
+.label .fixedWidth {
+	width: 20%;
 }

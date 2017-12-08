@@ -32,7 +32,7 @@ pieData.push({
   count: numNone
 });
 
-var maxCount = d3.max(pieData, d => d.count);
+var maxCount = d3.sum(pieData, d => d.count);
 
 //Code resource: https://github.com/kthotav/D3Visualizations/tree/master/Pie_Charts
 
@@ -70,21 +70,42 @@ var svg = d3.select("#vote-viz").append("svg")
   .append("g")
   .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
+var tooltip = d3.select('#vote-viz')
+  .append('div')
+  .attr('class', 'pie-tip');
+tooltip.append('div')
+    .attr('class', 'tip-label');
+tooltip.append('div')
+  .attr('class', 'percent');
+
+
+
 //g elements for arc are appended
 var g = svg.selectAll(".arc")
   .data(pie(pieData)) //importing data
   .enter().append("g")
   .attr("class","arc")
-  .on("mouseover", function() {
+  .on("mouseover", function(d) {
     d3.select(this)
       .style("opacity", 0.9)
       .select("text")
-      .style("fill", "gray");})
-  .on("mouseout", function() {
+      .style("fill", "gray");
+    tooltip.select('.tip-label').html(d.data.label);
+    var percent = Math.round(1000 * d.data.count / maxCount) / 10;
+    tooltip.select('.percent').html(percent + '%');
+    tooltip.style('display', 'block');
+  })
+  .on("mouseout", function(d) {
     d3.select(this)
       .style("opacity", 1.0)
       .select("text")
-      .style("fill", "white")});
+      .style("fill", "white")
+    tooltip.style('display', 'none');
+  });
+  // .on('mousemove', function(d) {
+  //   tooltip.style('top', (d3.event.pageY + 10) + 'px')
+  //     .style('left', (d3.event.pageX + 10) + 'px');
+  // });
 
 //arc's path appended
 g.append("path")
