@@ -18,6 +18,10 @@ if ($('#hope-cloud-svg') !== undefined) {
 	$('#hope-cloud-svg').remove();
 }
 
+var margin = {top:50, right:50, bottom: 50, left: 50},
+  width = 800 - margin.right - margin.left,
+  height = 800 - margin.top - margin.bottom
+
 var color = d3.scale.linear()
         .domain([d3.min(cloudData, d => d.size), d3.max(cloudData, d => d.size)])
         .range(["#222", "#ddd"]);
@@ -33,7 +37,7 @@ var tip = d3.tip()
     return "<div class='word-tip'><strong>Count: </strong> <strong>" + Math.round(fontScale.invert(d.size)) + "</span></div>";
   });
 
-d3.layout.cloud().size([800, 400])
+d3.layout.cloud().size([width, height])
         // .words(cloudData)
         // .rotate(0)
         // .fontSize(function(d) { return d.size; })
@@ -55,8 +59,8 @@ d3.layout.cloud().size([800, 400])
 
 function draw(words) {
   d3.select("#hope-cloud").append("svg")
-    .attr("width", 800)
-    .attr("height", 400)
+    .attr("width", width)
+    .attr("height", height)
     .attr("id", "hope-cloud-svg")
     .attr("class", "wordcloud")
     .append("g")
