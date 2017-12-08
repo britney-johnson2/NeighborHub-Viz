@@ -26,8 +26,8 @@
 			<div class="row intro-3">
 				<h2> More explanation... </h2>
 			</div>
-			<div class="row map-container">
-				<h2> Where are respondents from? </h2>
+			<div class="row" id="map-viz-container">
+				<h2 class="map-heading"> Where are respondents from? </h2>
 			</div>
 			<div class="row intro-3">
 				<h2> Let's explore the data!!! :D </h2>
@@ -202,16 +202,31 @@
     <script type="text/javascript" src="slick-1.8.0/slick/slick.min.js"></script>
     <script src="scripts/utils/slider.js"></script>
     <!-- viz libraries -->
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-    <script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.15.full.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script> -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+	  <script>
+	    d3version3 = d3
+	    window.d3 = null
+	  </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
+	  <script>
+	    d3version4 = d3
+	    window.d3 = null
+			// test it worked
+	    console.log('v3', d3version3.version)
+	    console.log('v4', d3version4.version)
+	  </script>
     <script src="scripts/utils/radarChart.js"></script>
 		<script src="scripts/utils/d3.layout.cloud.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+		<script src="scripts/utils/datamaps.usa.min.js"></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <!-- utility scripts -->
     <script src="scripts/utils/loadData.js"></script>
     <script src="scripts/utils/reload.js"></script>
     <script src="scripts/utils/filter.js"></script>
     <!-- viz components -->
+		<script src="scripts/map.js"></script>
     <script src="scripts/goodThings.js"></script>
     <script src="scripts/badThings.js"></script>
 		<script src="scripts/mayor.js"></script>

@@ -1,4 +1,4 @@
-
+d3 = d3version4;
 var voteData = voteFiltered;
 
 console.log('vote!');

@@ -1,3 +1,5 @@
+d3 = d3version3;
+
 /////////////////////////////////////////////////////////
 /////////////// The Radar Chart Function ////////////////
 /////////////// Written by Nadieh Bremer ////////////////
@@ -19,7 +21,7 @@ function RadarChart(id, data, options) {
 	 opacityCircles: 0.1, 	//The opacity of the circles of each blob
 	 strokeWidth: 2, 		//The width of the stroke around each blob
 	 roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
-	 color: d3.scaleOrdinal(d3.schemeCategory10)	//Color function
+	 color: d3.scale.ordinal(d3.schemeCategory10)	//Color function
 	};
 
 	//Put all of the options into a variable called cfg
@@ -39,7 +41,7 @@ function RadarChart(id, data, options) {
 		angleSlice = Math.PI * 2 / total;		//The width in radians of each "slice"
 
 	//Scale for the radius
-	var rScale = d3.scaleLinear()
+	var rScale = d3.scale.linear()
 		.range([0, radius])
 		.domain([0, maxValue]);
 
@@ -137,13 +139,13 @@ function RadarChart(id, data, options) {
 	/////////////////////////////////////////////////////////
 
 	//The radial line function
-	var radarLine = d3.lineRadial()
-		//.interpolate("linear-closed")
+	var radarLine = d3.svg.line.radial()
+		.interpolate("linear-closed")
 		.radius(function(d) { return rScale(d.value); })
 		.angle(function(d,i) {	return i*angleSlice; });
 
 	if(cfg.roundStrokes) {
-		//radarLine.interpolate("cardinal-closed");
+		radarLine.interpolate("cardinal-closed");
 	}
 
 	//Create a wrapper for the blobs

@@ -1,3 +1,4 @@
+d3 = d3version3;
 
 // set up frequency list
 var hopeData = filteredData['hope'].map(x => x.trim());
@@ -18,13 +19,13 @@ if ($('.wordcloud') !== undefined) {
 	$('.wordcloud').remove();
 }
 
-var color = d3.scaleLinear()
+var color = d3.scale.linear()
         .domain([d3.min(cloudData, d => d.size), d3.max(cloudData, d => d.size)])
         .range(["#ddd", "#222"]);
         //.range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
         //.range(["#222", "#333", "#444", "#555", "#666", "#777", "#888", "#999", "#aaa", "#bbb", "#ccc", "#ddd"]);
 
-var fontScale = d3.scaleLinear()
+var fontScale = d3.scale.linear()
   .domain([d3.min(cloudData, d => d.size), d3.max(cloudData, d => d.size)])
   .range([12, 32]);
 
