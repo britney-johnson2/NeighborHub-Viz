@@ -38,8 +38,8 @@ var maxCount = d3.sum(pieData, d => d.count);
 
 //margins and radius of circle
 var margin = {top:20, right:20, bottom: 20, left: 20},
-  width = 500 - margin.right - margin.left,
-  height = 500 - margin.top - margin.bottom
+  width = 400 - margin.right - margin.left,
+  height = 400 - margin.top - margin.bottom
   radius = width/2;
 
 //color function (for range of colors to apply to pie chart)

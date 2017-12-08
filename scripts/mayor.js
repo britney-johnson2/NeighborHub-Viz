@@ -36,7 +36,7 @@ Object.keys(categories).forEach(function(c) {
 //   .render();
 
 var margin = {top: 80, right: 80, bottom: 80, left: 80},
-				width = Math.min(600, window.innerWidth - 10) - margin.left - margin.right,
+				width = Math.min(500, window.innerWidth - 10) - margin.left - margin.right,
 				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
 var color = d3.scale.ordinal()
